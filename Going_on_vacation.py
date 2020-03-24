@@ -5,7 +5,6 @@ The computer optimizes the vacation for you.
 
 from pulp import *
 import pandas as pd
-import re
 
 # write a scaper before hand
 data = pd.read_csv('clymb_adventures.csv')

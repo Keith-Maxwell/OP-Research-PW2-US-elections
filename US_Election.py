@@ -1,7 +1,7 @@
 import pulp
 import pandas as pd
 
-N_votes = 538 # nombre de grands électeurs
+N_votes = 538  # nombre de grands électeurs
 # extraction des données depuis le fichier .csv
 data = pd.read_csv('US_voters.csv')  # données du site census.gov, citoyens de + de 18 ans
 
@@ -23,19 +23,18 @@ prob += u - v, 'objectif'
 
 # définition des contraintes
 for i in range(len(alpha_list)):
-    prob += alpha_list[i] * 1 / float(population_list[i]) - u <= 0
-    prob += v - alpha_list[i] * 1 / float(population_list[i]) <= 0
+    prob += alpha_list[i] * 1e6 / float(population_list[i]) - u <= 0
+    prob += v - alpha_list[i] * 1e6 / float(population_list[i]) <= 0
 prob += sum(alpha_list) == N_votes
 
 # résolution du problème
 prob.solve()
 print("status : ", pulp.LpStatus[prob.status])
 
-
 # affichage des résultats
 states = [v.name for v in prob.variables()]
 nb_electors = [v.varValue for v in prob.variables()]
-states = states[:-2]
+states = states[:-2]  # on enlève les deux dernières variables qui sont u et v car elles ne nous intéressent pas
 nb_electors = nb_electors[:-2]
-df = pd.DataFrame(nb_electors, index=states)
+df = pd.DataFrame(nb_electors, index=states)  # création d'une DataFrame Pandas juste pour le format d'affichage
 print(df)

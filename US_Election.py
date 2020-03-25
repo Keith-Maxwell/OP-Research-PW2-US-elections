@@ -14,7 +14,7 @@ import pandas as pd
 
 N_votes = 538 # nombre de grands électeurs
 # extraction des données depuis le fichier .csv
-data = pd.read_csv('US_voters_without_PuertoRico.csv', sep=',')  # données du site census.gov, citoyens de + de 18 ans
+data = pd.read_csv('US_voters_without_PuertoRico.csv')  # données du site census.gov, citoyens de + de 18 ans
 
 # définition du problème
 prob = pulp.LpProblem("répartition des grands électeurs", pulp.LpMinimize)

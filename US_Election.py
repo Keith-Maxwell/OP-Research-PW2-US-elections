@@ -3,7 +3,7 @@ import pandas as pd
 
 N_votes = 538  # nombre de grands électeurs
 # extraction des données depuis le fichier .csv
-data = pd.read_csv('US_voters.csv')  # données du site census.gov, citoyens de + de 18 ans
+data = pd.read_csv('US_voters_without_PuertoRico.csv')  # données du site census.gov, citoyens de + de 18 ans
 
 # définition du problème
 prob = pulp.LpProblem("répartition des grands électeurs", pulp.LpMinimize)
@@ -38,3 +38,19 @@ states = states[:-2]  # on enlève les deux dernières variables qui sont u et v
 nb_electors = nb_electors[:-2]
 df = pd.DataFrame(nb_electors, index=states)  # création d'une DataFrame Pandas juste pour le format d'affichage
 print(df)
+
+# Extractions des votes
+data_votes = pd.read_csv('elections_results.csv')  # 1 = trump , 0 = Clinton
+
+# addition des votes (pour D. Trump)
+s = 0
+for i in range(data_votes.__len__()):
+    s += data_votes.iloc[i, 1] * nb_electors[i]
+
+# Résultats des votes 
+if s > N_votes/2:
+    print('Donald Trump wins ! with : ', s, ' votes')
+elif s < N_votes/2:
+    print('Hillary Clinton wins ! with : ', s, ' votes')
+else:
+    print("it's a draw !")

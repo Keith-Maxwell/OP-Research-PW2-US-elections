@@ -3,7 +3,7 @@ import pandas as pd
 
 N_votes = 538  # nombre de grands électeurs
 # extraction des données depuis le fichier .csv
-data = pd.read_csv('US_voters.csv')  # données du site census.gov, citoyens de + de 18 ans
+data = pd.read_csv('US_voters_without_PuertoRico.csv')  # données du site census.gov, citoyens de + de 18 ans
 
 # définition du problème
 prob = pulp.LpProblem("répartition des grands électeurs", pulp.LpMinimize)
@@ -14,7 +14,7 @@ v = pulp.LpVariable('v', 0, None, pulp.LpContinuous)
 alpha_list = []  # la variable 'alpha' représente le nombre de grands électeurs dans l'Etat 'i'
 population_list = []  # population dans l'Etat 'i'
 for i in range(data.__len__()):
-    alpha_i = pulp.LpVariable(str(data.iloc[i, 0]), 0, None, pulp.LpInteger)  # définition des variables alpha_i
+    alpha_i = pulp.LpVariable(str(data.iloc[i, 0]), 3, None, pulp.LpInteger)  # définition des variables alpha_i
     alpha_list.append(alpha_i)
     population_list.append(int(data.iloc[i, 1]))
 
@@ -45,9 +45,9 @@ for i in range(data.__len__()):
     s += data.iloc[i, 2] * nb_electors[i]
 
 # Résultats des votes
-if s > N_votes/2:
+if s > N_votes / 2:
     print('Donald Trump wins ! with : ', s, ' votes')
-elif s < N_votes/2:
-    print('Hillary Clinton wins ! with : ', s, ' votes')
+elif s < N_votes / 2:
+    print('Hillary Clinton wins ! with : ', N_votes - s, ' votes')
 else:
     print("it's a draw !")

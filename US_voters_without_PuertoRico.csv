@@ -1,52 +1,53 @@
-State,Voters,Vote(1:Trump 0:Clinton)
-Alabama,3670229,1
-Alaska,531845,1
-Arizona,4801062,1
-Arkansas,2193217,1
-California,25197798,0
-Colorado,3979278,0
-Connecticut,2602785,0
-Delaware,705209,0
-Florida,14732562,0
-Georgia,7241281,1
-Hawaii,1018631,1
-Idaho,1191262,0
-Illinois,9038458,1
-Indiana,4867305,0
-Iowa,2320932,1
-Kansas,2077911,1
-Kentucky,3342304,1
-Louisiana,3466716,1
-Maine,1056891,1
-Maryland,4260093,0
-Massachusetts,4948041,0
-Michigan,7453953,0
-Minnesota,4036966,1
-Mississippi,2233124,0
-Missouri,4584987,1
-Montana,804235,1
-Nebraska,1354457,1
-Nevada,1976423,1
-New Hampshire,1043880,0
-New Jersey,6127545,0
-New Mexico,1481858,0
-New York,13702460,0
-North Carolina,7418127,0
-North Dakota,570697,1
-Ohio,8785985,1
-Oklahoma,2821838,1
-Oregon,3021486,1
-Pennsylvania,9740121,0
-Rhode Island,787945,1
-South Carolina,3731331,0
-South Dakota,635373,1
-Tennessee,4968677,1
-Texas,17841560,1
-Utah,1983374,1
-Vermont,494736,1
-Virginia,6093779,0
-Washington,5173515,0
-West Virginia,1438443,0
-Wisconsin,4351720,1
-Wyoming,433794,1
-District of Columbia,513470,1
+State,Voters,Vote(1:Trump 0:Clinton),Trump_percent,Clinton_percent
+Alabama,3670229,1,0.63,0.35
+Alaska,531845,1,0.53,0.38
+Arizona,4801062,1,0.5,0.45
+Arkansas,2193217,1,0.6,0.34
+California,25197798,0,0.33,0.67
+Colorado,3979278,0,0.44,0.47
+Connecticut,2602785,0,0.41,0.54
+Delaware,705209,0,0.42,0.53
+Florida,14732562,0,0.04,0.93
+Georgia,7241281,1,0.49,0.48
+Hawaii,1018631,1,0.51,0.46
+Idaho,1191262,0,0.3,0.62
+Illinois,9038458,1,0.59,0.28
+Indiana,4867305,0,0.39,0.55
+Iowa,2320932,1,0.57,0.38
+Kansas,2077911,1,0.52,0.42
+Kentucky,3342304,1,0.57,0.36
+Louisiana,3466716,1,0.62,0.33
+Maine,1056891,1,0.58,0.38
+Maryland,4260093,0,0.45,0.48
+Massachusetts,4948041,0,0.35,0.6
+Michigan,7453953,0,0.03,0.61
+Minnesota,4036966,1,0.48,0.47
+Mississippi,2233124,0,0.45,0.47
+Missouri,4584987,1,0.58,0.4
+Montana,804235,1,0.57,0.38
+Nebraska,1354457,1,0.56,0.36
+Nevada,1976423,1,0.6,0.34
+New Hampshire,1043880,0,0.45,0.48
+New Jersey,6127545,0,0.47,0.48
+New Mexico,1481858,0,0.42,0.55
+New York,13702460,0,0.4,0.48
+North Carolina,7418127,0,0.37,0.59
+North Dakota,570697,1,0.5,0.47
+Ohio,8785985,1,0.64,0.28
+Oklahoma,2821838,1,0.52,0.43
+Oregon,3021486,1,0.65,0.29
+Pennsylvania,9740121,0,0.41,0.52
+Rhode Island,787945,1,0.49,0.48
+South Carolina,3731331,0,0.4,0.55
+South Dakota,635373,1,0.55,0.41
+Tennessee,4968677,1,0.61,0.32
+Texas,17841560,1,0.61,0.35
+Utah,1983374,1,0.53,0.43
+Vermont,494736,1,0.46,0.28
+Virginia,6093779,0,0.33,0.61
+Washington,5173515,0,0.45,0.5
+West Virginia,1438443,0,0.38,0.54
+Wisconsin,4351720,1,0.69,0.26
+Wyoming,433794,1,0.48,0.47
+District of Columbia,513470,1,0.7,0.22
+,,,0,1

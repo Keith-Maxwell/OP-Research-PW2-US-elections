@@ -1,52 +1,52 @@
-State,Voters
-Alabama,3670229
-Alaska,531845
-Arizona,4801062
-Arkansas,2193217
-California,25197798
-Colorado,3979278
-Connecticut,2602785
-Delaware,705209
-Florida,14732562
-Georgia,7241281
-Hawaii,1018631
-Idaho,1191262
-Illinois,9038458
-Indiana,4867305
-Iowa,2320932
-Kansas,2077911
-Kentucky,3342304
-Louisiana,3466716
-Maine,1056891
-Maryland,4260093
-Massachusetts,4948041
-Michigan,7453953
-Minnesota,4036966
-Mississippi,2233124
-Missouri,4584987
-Montana,804235
-Nebraska,1354457
-Nevada,1976423
-New Hampshire,1043880
-New Jersey,6127545
-New Mexico,1481858
-New York,13702460
-North Carolina,7418127
-North Dakota,570697
-Ohio,8785985
-Oklahoma,2821838
-Oregon,3021486
-Pennsylvania,9740121
-Rhode Island,787945
-South Carolina,3731331
-South Dakota,635373
-Tennessee,4968677
-Texas,17841560
-Utah,1983374
-Vermont,494736
-Virginia,6093779
-Washington,5173515
-West Virginia,1438443
-Wisconsin,4351720
-Wyoming,433794
-District of Columbia,513470
+State,Voters,Vote(1:Trump 0:Clinton)
+Alabama,3670229,1
+Alaska,531845,1
+Arizona,4801062,1
+Arkansas,2193217,1
+California,25197798,0
+Colorado,3979278,0
+Connecticut,2602785,0
+Delaware,705209,0
+Florida,14732562,0
+Georgia,7241281,1
+Hawaii,1018631,1
+Idaho,1191262,0
+Illinois,9038458,1
+Indiana,4867305,0
+Iowa,2320932,1
+Kansas,2077911,1
+Kentucky,3342304,1
+Louisiana,3466716,1
+Maine,1056891,1
+Maryland,4260093,0
+Massachusetts,4948041,0
+Michigan,7453953,0
+Minnesota,4036966,1
+Mississippi,2233124,0
+Missouri,4584987,1
+Montana,804235,1
+Nebraska,1354457,1
+Nevada,1976423,1
+New Hampshire,1043880,0
+New Jersey,6127545,0
+New Mexico,1481858,0
+New York,13702460,0
+North Carolina,7418127,0
+North Dakota,570697,1
+Ohio,8785985,1
+Oklahoma,2821838,1
+Oregon,3021486,1
+Pennsylvania,9740121,0
+Rhode Island,787945,1
+South Carolina,3731331,0
+South Dakota,635373,1
+Tennessee,4968677,1
+Texas,17841560,1
+Utah,1983374,1
+Vermont,494736,1
+Virginia,6093779,0
+Washington,5173515,0
+West Virginia,1438443,0
+Wisconsin,4351720,1
+Wyoming,433794,1
+District of Columbia,513470,1

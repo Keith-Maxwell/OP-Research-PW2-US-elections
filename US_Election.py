@@ -1,9 +1,28 @@
 import pulp
 import pandas as pd
 
+''' Hypothesis :
+The population is over 18 years old, and citizens.
+Puerto Rico has the right to vote or not, we will do both cases.
+Puerto Rico voted for Hillary Clinton at 100%
+Minimum 3 great electors per state.
+'''
+
+while True:
+    try:  # ensures the input is either 1 or 0 and not something else
+        yesno = int(input('Does Puerto-Rico have the right of vote ? (1: yes, 0: no) \n'))
+        if yesno >= 0:
+            if yesno <= 1:
+                break
+    except ValueError:
+        print('please enter either 1 or 0')
+
 N_votes = 538  # nombre de grands électeurs
 # extraction des données depuis le fichier .csv
-data = pd.read_csv('US_voters_without_PuertoRico.csv')  # données du site census.gov, citoyens de + de 18 ans
+if yesno == 0:
+    data = pd.read_csv('US_voters_without_PuertoRico.csv')  # données du site census.gov, citoyens de + de 18 ans
+else:
+    data = pd.read_csv('US_voters.csv')
 
 # définition du problème
 prob = pulp.LpProblem("répartition des grands électeurs", pulp.LpMinimize)
@@ -51,3 +70,9 @@ elif s < N_votes / 2:
     print('Hillary Clinton wins ! with : ', N_votes - s, ' votes')
 else:
     print("it's a draw !")
+
+'''
+When Puerto-Rico can vote, Trump wins with 312 votes, even though Puerto-Rico votes for Clinton.
+
+When Puerto-Rico cannot vote, Trump still wins but with only 310 votes. The electors are splited differently
+'''

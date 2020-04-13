@@ -16,6 +16,13 @@ while True:
                 break
     except ValueError:
         print('please enter either 1 or 0')
+while True:
+    try:
+        min_nb_electors = int(input("Enter the minimum number of great electors per state :\n"))
+        if type(min_nb_electors) == int:
+            break
+    except ValueError:
+        print("Please enter a number")
 
 N_votes = 538  # nombre de grands électeurs
 # extraction des données depuis le fichier .csv
@@ -33,7 +40,8 @@ v = pulp.LpVariable('v', 0, None, pulp.LpContinuous)
 alpha_list = []  # la variable 'alpha' représente le nombre de grands électeurs dans l'Etat 'i'
 population_list = []  # population dans l'Etat 'i'
 for i in range(data.__len__()):
-    alpha_i = pulp.LpVariable(str(data.iloc[i, 0]), 3, None, pulp.LpInteger)  # définition des variables alpha_i
+    alpha_i = pulp.LpVariable(str(data.iloc[i, 0]), min_nb_electors, None,
+                              pulp.LpInteger)  # définition des variables alpha_i
     alpha_list.append(alpha_i)
     population_list.append(int(data.iloc[i, 1]))
 
@@ -74,5 +82,7 @@ else:
 '''
 When Puerto-Rico can vote, Trump wins with 312 votes, even though Puerto-Rico votes for Clinton.
 
-When Puerto-Rico cannot vote, Trump still wins but with only 310 votes. The electors are splited differently
+When Puerto-Rico cannot vote, Trump still wins but with only 310 votes. The electors are split differently
+
+Whatever the minimum number of great electors per state, Trump always wins 
 '''

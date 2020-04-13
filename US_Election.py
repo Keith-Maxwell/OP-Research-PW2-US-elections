@@ -5,7 +5,7 @@ import pandas as pd
 The population is over 18 years old, and citizens.
 Puerto Rico has the right to vote or not, we will do both cases.
 Puerto Rico voted for Hillary Clinton at 100%
-Minimum 3 great electors per state.
+Variable number of great electors 
 '''
 
 while True:
@@ -85,4 +85,6 @@ When Puerto-Rico can vote, Trump wins with 312 votes, even though Puerto-Rico vo
 When Puerto-Rico cannot vote, Trump still wins but with only 310 votes. The electors are split differently
 
 Whatever the minimum number of great electors per state, Trump always wins 
+
+Even if Florida, which had 49% for Trump and 48% for Clinton, switched for Clinton, Trump would still win. (both cases : with and without PuertoRico)
 '''
